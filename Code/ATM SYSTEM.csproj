@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D67E6EB-0F67-4E58-803B-4F63CBF9C3BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ATM_SYSTEM</RootNamespace>
+    <AssemblyName>ATM SYSTEM</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.1.2\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.1.2\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.1.2\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Twilio, Version=5.39.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Twilio.5.39.1\lib\net451\Twilio.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="accountcheckUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="accountcheckUserControl1.Designer.cs">
+      <DependentUpon>accountcheckUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_dashboard.Designer.cs">
+      <DependentUpon>admin_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_login.Designer.cs">
+      <DependentUpon>admin_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="atm_balanceUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="atm_balanceUserControl1.Designer.cs">
+      <DependentUpon>atm_balanceUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BalanceUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BalanceUserControl1.Designer.cs">
+      <DependentUpon>BalanceUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CardUserControl.Designer.cs">
+      <DependentUpon>CardUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changesUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="changesUserControl1.Designer.cs">
+      <DependentUpon>changesUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Changing_passwordUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Changing_passwordUserControl1.Designer.cs">
+      <DependentUpon>Changing_passwordUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Changing_pin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Changing_pin.Designer.cs">
+      <DependentUpon>Changing_pin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Createaccount_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Createaccount_UserControl.Designer.cs">
+      <DependentUpon>Createaccount_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="customerUserControl1.Designer.cs">
+      <DependentUpon>customerUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deactivateUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="deactivateUserControl1.Designer.cs">
+      <DependentUpon>deactivateUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="depositUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="depositUserControl1.Designer.cs">
+      <DependentUpon>depositUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employeeUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employeeUserControl1.Designer.cs">
+      <DependentUpon>employeeUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_dashboard.Designer.cs">
+      <DependentUpon>Employee_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_login.Designer.cs">
+      <DependentUpon>Employee_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lastdateUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lastdateUserControl1.Designer.cs">
+      <DependentUpon>lastdateUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loansUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="loansUserControl1.Designer.cs">
+      <DependentUpon>loansUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loanUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="loanUserControl1.Designer.cs">
+      <DependentUpon>loanUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="moneyUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="moneyUserControl1.Designer.cs">
+      <DependentUpon>moneyUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordchangeUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PasswordchangeUserControl1.Designer.cs">
+      <DependentUpon>PasswordchangeUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PaymentUserControl1.Designer.cs">
+      <DependentUpon>PaymentUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PinchangeUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PinchangeUserControl1.Designer.cs">
+      <DependentUpon>PinchangeUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="starting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="starting.Designer.cs">
+      <DependentUpon>starting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transactioncheckUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="transactioncheckUserControl1.Designer.cs">
+      <DependentUpon>transactioncheckUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transactionUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="transactionUserControl1.Designer.cs">
+      <DependentUpon>transactionUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="withdrawUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="withdrawUserControl1.Designer.cs">
+      <DependentUpon>withdrawUserControl1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="accountcheckUserControl1.resx">
+      <DependentUpon>accountcheckUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_dashboard.resx">
+      <DependentUpon>admin_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_login.resx">
+      <DependentUpon>admin_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="atm_balanceUserControl1.resx">
+      <DependentUpon>atm_balanceUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BalanceUserControl1.resx">
+      <DependentUpon>BalanceUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardUserControl.resx">
+      <DependentUpon>CardUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changesUserControl1.resx">
+      <DependentUpon>changesUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Changing_passwordUserControl1.resx">
+      <DependentUpon>Changing_passwordUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Changing_pin.resx">
+      <DependentUpon>Changing_pin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Createaccount_UserControl.resx">
+      <DependentUpon>Createaccount_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerUserControl1.resx">
+      <DependentUpon>customerUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deactivateUserControl1.resx">
+      <DependentUpon>deactivateUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="depositUserControl1.resx">
+      <DependentUpon>depositUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employeeUserControl1.resx">
+      <DependentUpon>employeeUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_dashboard.resx">
+      <DependentUpon>Employee_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_login.resx">
+      <DependentUpon>Employee_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lastdateUserControl1.resx">
+      <DependentUpon>lastdateUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loansUserControl1.resx">
+      <DependentUpon>loansUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loanUserControl1.resx">
+      <DependentUpon>loanUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="moneyUserControl1.resx">
+      <DependentUpon>moneyUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordchangeUserControl1.resx">
+      <DependentUpon>PasswordchangeUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentUserControl1.resx">
+      <DependentUpon>PaymentUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PinchangeUserControl1.resx">
+      <DependentUpon>PinchangeUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="starting.resx">
+      <DependentUpon>starting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transactioncheckUserControl1.resx">
+      <DependentUpon>transactioncheckUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transactionUserControl1.resx">
+      <DependentUpon>transactionUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="withdrawUserControl1.resx">
+      <DependentUpon>withdrawUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ATM_SYSTEM_DATABASE.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ATM_SYSTEM_DATABASE_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>ATM_SYSTEM_DATABASE.mdf</DependentUpon>
+    </Content>
+    <Content Include="Database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
+    <None Include="resources\Bank Logo.png" />
+    <None Include="resources\gif.gif" />
+    <None Include="resources\starting.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
